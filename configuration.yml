@@ -1,0 +1,6 @@
+# Server configurations
+server:
+  host: "localhost"
+  port: 53
+  netprotocol: "udp"
+  udpsize: 65535
