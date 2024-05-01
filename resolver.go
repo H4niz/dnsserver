@@ -40,7 +40,8 @@ func bitDomResolve(domain string, qtype uint16) []dns.RR {
 	m.SetQuestion(dns.Fqdn(domain), qtype)
 	m.RecursionDesired = true
 	answers := []dns.RR{}
-	c := new(dns.Client)
+	c := &dns.Client{Timeout: 5 * time.Second}
+	
 	in, _, err := c.Exchange(m, "8.8.8.8:53")
 	if err != nil {
 		log.Println(err)
