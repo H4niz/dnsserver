@@ -1,6 +1,8 @@
 # Server configurations
 server:
-  host: "localhost"
+  host: "192.168.116.132"
   port: 53
   netprotocol: "udp"
   udpsize: 65535
+database:
+  dbname: "./databases/bitDome-db"
